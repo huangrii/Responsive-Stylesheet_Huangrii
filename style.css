@@ -42,7 +42,33 @@ div{
   margin: 5px;
   padding: 2px;
 }
+/* Query #1: Tablet View - Kích hoạt khi màn hình từ 772px trở lên */
+@media (min-width: 772px) {
+    /* 1a. Đổi chiều rộng div thành 45% viewport width */
+    div {
+        width: 45vw; 
+        
+        /* 1b. Thuộc tính bổ sung để các thẻ div xếp ngang hàng nhau (tạo thành 2 cột) */
+        display: inline-block; 
+        vertical-align: top; /* Giúp các khối căn bằng nhau ở phía trên */
+        margin: 1%; /* Thêm chút khoảng cách cho đẹp, tuỳ chọn */
+    }
 
+    /* 1a. Giới hạn chiều cao ảnh tối đa 30% viewport height */
+    img {
+        max-height: 30vh;
+        width: auto; /* Giữ nguyên tỷ lệ ảnh để không bị méo */
+    }
+}
+/* Query #2: Large Screen View - Kích hoạt khi màn hình từ 998px trở lên */
+@media (min-width: 998px) {
+    /* 2a. Đổi chiều rộng div thành 30% viewport width để vừa 3 cột */
+    div {
+        width: 30vw;
+    }
+    
+    /* 2b. Không cần thay đổi gì thêm, CSS sẽ tự động kế thừa display: inline-block từ Query #1 */
+}
 
 
 
