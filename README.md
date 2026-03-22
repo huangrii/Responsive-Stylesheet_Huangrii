@@ -1,1 +1,1 @@
-# Responsive-Stylesheet_Huangrii
+# week2-rd-responsive-hw-starter
